@@ -1,0 +1,15 @@
+
+<p></p>
+<p></p>
+
+<%= form_for @w,:url => {:action => 'create'}  do |f| %>
+
+  <div class="field">
+    <%= f.label :メッセージを入れてください %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'URLの生成' %>
+  </div>
+
+<% end %>

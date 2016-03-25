@@ -1,0 +1,2 @@
+module WantaHelper
+end

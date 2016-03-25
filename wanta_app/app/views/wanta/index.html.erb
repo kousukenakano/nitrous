@@ -1,0 +1,24 @@
+<h1>Wanta#index</h1>
+<p>Find me in app/views/wanta/index.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>uniqe</th>
+      <th>content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @w.each do |f| %>
+      <tr>
+        <td><%= f.uniqe %></td>
+        <td><%= f.content %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

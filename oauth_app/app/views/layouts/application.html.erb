@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OauthApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div>
+		<% if current_user %>
+			<%= 'Twitterユーザ名: ' + current_user.name + '  '%> <%= link_to 'ログアウト', logout_path %>
+			<% else %><%= link_to 'ログイン', '/auth/twitter' %>
+		<% end %>
+	</div>
+	<div>
+		<%= yield %>
+	</div>
+</body>
+<footer>
+	<div>	
+		follower一覧<br>
+		<%= follower %>
+		<%= debug follower.inspect %>
+	</div>
+	<div>	
+		follow一覧<br>
+		<%= friend %>
+		<%= debug friend.inspect %>
+	</div>	
+	
+	</footer>
+</html>
